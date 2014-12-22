@@ -11,8 +11,8 @@
 
     <title>{{ title }}</title>
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Jockey+One|Oswald|Bangers|Special+Elite|Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/google-webfont.css" %}" rel='stylesheet' type='text/css'>
 
     <link href="{% static "css/navbar-fixed-top.css" %}" rel="stylesheet">
     <link href="{% static "css/base.css" %}" rel="stylesheet">
@@ -64,8 +64,8 @@
       {% endblock %}
     </div> <!-- /container -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="{% static "js/libs/jquery.min.js" %}"></script>
+    <script src="{% static "js/libs/bootstrap.min.js" %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{% static "js/ie10-viewport-bug-workaround.js" %}"></script>
   </body>
