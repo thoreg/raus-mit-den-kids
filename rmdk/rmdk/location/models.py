@@ -1,4 +1,5 @@
-from django.db import models
+#from django.db import models
+from django.contrib.gis.db import models
 from taggit.managers import TaggableManager
 
 from django_countries.fields import CountryField
@@ -17,6 +18,8 @@ class Address(models.Model):
     country = CountryField()
     longitude = models.FloatField(blank=True, null=True)
     latitude = models.FloatField(blank=True, null=True)
+
+    description = models.CharField(max_length=2048)
 
 
 class Link(models.Model):

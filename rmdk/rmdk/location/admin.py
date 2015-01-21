@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 from django.contrib import admin
 
+from rmdk.location.forms import AddressAdminForm
 from rmdk.location.models import Address, Link
 
 
@@ -12,5 +14,7 @@ class AddressAdmin(admin.ModelAdmin):
     inlines = [
         LinkInline,
     ]
+    form = AddressAdminForm
+
 
 admin.site.register(Address, AddressAdmin)
