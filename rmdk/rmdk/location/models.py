@@ -1,8 +1,9 @@
-#from django.db import models
+# -*- coding: utf-8 -*-
 from django.contrib.gis.db import models
+from django_countries.fields import CountryField
 from taggit.managers import TaggableManager
 
-from django_countries.fields import CountryField
+from rmdk.location.services import get_geo_coords
 
 
 class Address(models.Model):
@@ -20,6 +21,15 @@ class Address(models.Model):
     latitude = models.FloatField(blank=True, null=True)
 
     description = models.CharField(max_length=2048)
+
+    def __str__(self):
+        return self.name
+
+    def save(self, **kwargs):
+        if not self.latitude:
+            self.latitude, self.longitude = get_geo_coords(self.street, self.postal_code)
+
+        super(Address, self).save(**kwargs)
 
 
 class Link(models.Model):
