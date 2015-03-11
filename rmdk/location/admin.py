@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
 
-from rmdk.location.forms import AddressAdminForm
-from rmdk.location.models import Address, Link
+from location.forms import AddressAdminForm
+from location.models import Address, Link
 
 
 class LinkInline(admin.TabularInline):

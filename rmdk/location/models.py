@@ -3,7 +3,7 @@ from django.contrib.gis.db import models
 from django_countries.fields import CountryField
 from taggit.managers import TaggableManager
 
-from rmdk.location.services import get_geo_coords
+from location.services import get_geo_coords
 
 
 class Address(models.Model):

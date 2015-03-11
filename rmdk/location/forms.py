@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 from django import forms
 
-from rmdk.location.models import Address
+from location.models import Address
 
 
 class AddressAdminForm(forms.ModelForm):
+
     class Meta:
         model = Address
         widgets = {
