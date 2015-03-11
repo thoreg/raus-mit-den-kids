@@ -1,5 +1,5 @@
 import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -13,8 +13,9 @@ INSTALLED_APPS = (
 
     'django_countries',
     'taggit',
+    'rest_framework',
 
-    'rmdk.location',
+    'location',
 )
 
 MIDDLEWARE_CLASSES = (
